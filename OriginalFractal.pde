@@ -1,4 +1,4 @@
-//attempt at a shuriken
+//attempt at a shuriken;just a word of warning, the browser might not be able to handle LVL 8+.
 public final int LVL = 5;
 public final float X2 = 0.75;
 public void setup(){
