@@ -1,5 +1,6 @@
-//attempt at a shuriken. I really hope this counts as a fractal.
-public int LVL = 5;
+//attempt at a shuriken
+public final int LVL = 5;
+public final float X2 = 0.75;
 public void setup(){
  size(840,840);
  background(0);
@@ -13,18 +14,18 @@ public void draw(){
 }
 private void recurse(int lvl) {
   if (lvl <=0) {
-    line(0, 0, 0.73*width, 0);
+    line(0, 0, X2*width, 0);
   } else {
     pushMatrix();
     scale(2*cos((float)Math.PI/6)/3);
     rotate((float)Math.PI/6); //30deg
     
     recurse(lvl-1);
-    translate(0.73*width, 0);
+    translate(X2*width, 0);
     rotate(((float)(2*Math.PI))/3); //120deg
     
     recurse(lvl-1);
-    translate(0.73*width, 0);
+    translate(X2*width, 0);
     rotate(((float)(2*Math.PI))/3); //120deg
     
     recurse(lvl-1);
